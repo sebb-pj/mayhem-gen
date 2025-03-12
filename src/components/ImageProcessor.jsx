@@ -22,6 +22,12 @@ export default function ImageProcessor() {
       {image && (
         <div className="image-container">
           <img src={image} alt="Uploaded" className="uploaded-image" />
+          
+          <div
+            className="blurred-overlay"
+            style={{ backgroundImage: `url(${image})` }}
+          ></div>
+          
           <img src={brokenMirror} alt="Broken Mirror Overlay" className="overlay" />
         </div>
       )}
