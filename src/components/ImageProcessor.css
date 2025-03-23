@@ -5,6 +5,7 @@
     padding: 20px;
     background-color: #f4f4f4;
     min-height: 100vh;
+
   }
   
   .upload-btn {
@@ -50,6 +51,7 @@
   .canvas {
     max-width: 100%;
     border: 1px solid #ccc;
+    max-height: 80vh;
   }
   
   .download-btn {

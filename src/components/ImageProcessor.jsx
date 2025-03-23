@@ -48,7 +48,7 @@ export default function ImageProcessor() {
         ctx.clip();
         
         // Apply blur and grayscale filter to the left side
-        ctx.filter = "blur(3px) grayscale(1)";
+        ctx.filter = "blur(4px) grayscale(1)";
         ctx.drawImage(img, 0, 0);
         ctx.restore();
         
@@ -84,7 +84,10 @@ export default function ImageProcessor() {
 
   return (
     <div className="container">
-      <input type="file" accept="image/*" onChange={handleImageUpload} className="upload-btn" />
+      <label className="upload-btn">
+        Upload Picture
+        <input type="file" accept="image/*" onChange={handleImageUpload} hidden />
+      </label>
       {image && (
         <>
           <canvas ref={canvasRef} className="canvas" />
