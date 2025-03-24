@@ -1,11 +1,11 @@
 import { useState, useRef, useEffect } from "react";
 import "./ImageProcessor.css";
-import brokenMirror from "assets/broken-mirror.png"; 
+import brokenMirror from "../assets/broken-mirror.png";
 
 export default function ImageProcessor() {
   const [image, setImage] = useState(null);
+  const [darkMode, setDarkMode] = useState(false);
   const canvasRef = useRef(null);
-  const overlaySrc = "/broken-mirror.png";
 
   const handleImageUpload = (event) => {
     const file = event.target.files[0];
@@ -65,7 +65,7 @@ export default function ImageProcessor() {
         
         // Draw broken mirror overlay
         const overlay = new Image();
-        overlay.src = overlaySrc;
+        overlay.src = brokenMirror;
         overlay.crossOrigin = "Anonymous";
         overlay.onload = () => {
           ctx.drawImage(overlay, 0, 0, canvas.width, canvas.height);
@@ -82,8 +82,16 @@ export default function ImageProcessor() {
     link.click();
   };
 
+  const toggleDarkMode = () => {
+    setDarkMode((prevMode) => !prevMode);
+    document.body.classList.toggle("dark-mode");
+  };
+
   return (
-    <div className="container">
+    <div className={`container ${darkMode ? "dark" : "light"}`}>
+      <button onClick={toggleDarkMode} className="toggle-btn">
+        {darkMode ? "Light Mode" : "Dark Mode"}
+      </button>
       <label className="upload-btn">
         Upload Picture
         <input type="file" accept="image/*" onChange={handleImageUpload} hidden />
@@ -97,5 +105,6 @@ export default function ImageProcessor() {
     </div>
   );
 }
+
 
 
