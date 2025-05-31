@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/mayhem-gen/static/css/main.5eb2920e.css",
+    "main.js": "/mayhem-gen/static/js/main.2940fd59.js",
+    "static/js/453.d00089d3.chunk.js": "/mayhem-gen/static/js/453.d00089d3.chunk.js",
+    "static/media/broken-mirror.png": "/mayhem-gen/static/media/broken-mirror.aaf7e9099efb4c7fef41.png",
+    "index.html": "/mayhem-gen/index.html",
+    "main.5eb2920e.css.map": "/mayhem-gen/static/css/main.5eb2920e.css.map",
+    "main.2940fd59.js.map": "/mayhem-gen/static/js/main.2940fd59.js.map",
+    "453.d00089d3.chunk.js.map": "/mayhem-gen/static/js/453.d00089d3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5eb2920e.css",
+    "static/js/main.2940fd59.js"
+  ]
+}
