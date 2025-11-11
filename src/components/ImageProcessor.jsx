@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import "./ImageProcessor.css";
 import brokenMirror from "../assets/broken-mirror.png";
+import logo from "../assets/logo.svg";
 
 export default function ImageProcessor() {
   const [image, setImage] = useState(null);
@@ -89,9 +90,15 @@ export default function ImageProcessor() {
 
   return (
     <div className={`container ${darkMode ? "dark" : "light"}`}>
-      <button onClick={toggleDarkMode} className="toggle-btn">
+      <div className="navbar">
+        <div className="logo-bar"> 
+          <a href="/"><img src={logo} alt="Logo" className="logo" /></a>
+          <a href="/"><h1>MAYHEM Generator</h1></a>
+        </div>
+        <button onClick={toggleDarkMode} className="toggle-btn">
         {darkMode ? "Light Mode" : "Dark Mode"}
-      </button>
+        </button>
+      </div>
       <label className="upload-btn">
         Upload Picture
         <input type="file" accept="image/*" onChange={handleImageUpload} hidden />
